@@ -1,0 +1,131 @@
+{
+    "start": {
+        "question": "What is your martial status?",
+        "options": [
+            {"label": "Single", "next": "single_path"},
+            {"label": "Married", "next": "married_path"}
+        ]
+    },
+
+    "married_path": {
+        "question": "How long have you been married?",
+        "options": [
+            {"label": "Less than a year", "next": "marriage_short"},
+            {"label": "More than a year", "next": "anniversary"},
+            {"label": "More than five years", "next": "marriage_long"},
+            {"label": "Prefer not to say", "next": "marriage_wishes"}
+        ]
+    },
+
+    "marriage_short": {
+        "question": "Did you organize a wedding ceremony?",
+        "options": [
+            {"label": "Yes", "next": "marriage_cost"},
+            {"label": "No", "next": "marriage_wishes"}
+        ]
+    },
+
+    "marriage_cost": {
+        "question": "What was the approximate cost of your wedding?",
+        "options": [
+            {"label": "Less than $10,000", "next": "marriage_wishes"},
+            {"label": "$10,000 - $50,000", "next": "marriage_wishes"},
+            {"label": "More than $50,000", "next": "marriage_wishes"}
+        ]
+    },
+    
+    "marriage_wishes": {
+        "question": "Congratulations on your new journey together!",
+        "options": [
+            {"label": "Thank you!", "next": "end"}
+        ]
+    },
+
+    "anniversary": {
+        "question": "Happy Anniversary! How do you plan to celebrate?",
+        "options": [
+            {"label": "Dinner", "next": "anniversary_dinner"},
+            {"label": "Trip", "next": "anniversary_trip"},
+            {"label": "Party", "next": "anniversary_party"}
+        ]
+    },
+
+    "anniversary_dinner": {
+        "question": "That sounds lovely! Enjoy your special dinner.",
+        "options": [
+            {"label": "Thank you!", "next": "end"}
+        ]
+    },
+
+    "anniversary_trip": {
+        "question": "Have a fantastic trip!",
+        "options": [
+            {"label": "Thank you!", "next": "end"}
+        ]
+    },
+
+    "anniversary_party": {
+        "question": "Hope you have a great time at your party!",
+        "options": [
+            {"label": "Thank you!", "next": "end"}
+        ]
+    },
+
+    "marriage_long": {
+        "question": "Wow, that's a long time! Any special plans to celebrate?",
+        "options": [
+            {"label": "Yes", "next": "long_marriage_plans"},
+            {"label": "No", "next": "end"}
+        ]
+    },
+
+    "long_marriage_plans": {
+        "question": "Sounds exciting! Enjoy your celebration.",
+        "options": [
+            {"label": "Thank you!", "next": "end"}
+        ]
+    },
+
+    "single_path": {
+        "question": "Are you currently dating someone?",
+        "options": [
+            {"label": "Yes", "next": "dating_yes"},
+            {"label": "No", "next": "dating_no"}
+        ]
+    },
+
+    "dating_yes": {
+        "question": "That's great! How long have you been dating?",
+        "options": [
+            {"label": "Less than 6 months", "next": "dating_short"},
+            {"label": "More than 6 months", "next": "dating_long"}
+        ]
+    },
+
+    "dating_short": {
+        "question": "Enjoy getting to know each other!",
+        "options": [
+            {"label": "Thank you!", "next": "end"}
+        ]
+    },
+
+    "dating_long": {
+        "question": "Wishing you all the best in your relationship!",
+        "options": [
+            {"label": "Thank you!", "next": "end"}
+        ]
+    },
+
+    "dating_no": {
+        "question": "Enjoy your independence and have fun!",
+        "options": [
+            {"label": "Thank you!", "next": "end"}
+        ]
+    },
+
+    "end": {
+        "question": "Thank you for sharing! Have a great day!",
+        "answer": "END",
+        "options": []
+    }
+}
