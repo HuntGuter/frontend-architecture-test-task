@@ -53,7 +53,7 @@ All conversion rules are defined via an external configuration file, allowing th
 }
 ```
 
-Output Example
+### Output Example
 
 ```json
 {
@@ -62,7 +62,7 @@ Output Example
 }
 ```
 
-Key Engineering Focus
+### Key Engineering Focus
 
 - separation of logic and configuration
 - precision handling
@@ -71,13 +71,13 @@ Key Engineering Focus
 
 ---
 
-##Task 2 — Data Filtering and Sorting Engine
+## Task 2 — Data Filtering and Sorting Engine
 
-###Description
+### Description
 
 A generic engine for filtering and sorting collections of objects with arbitrary structure, based on predefined rules.
 
-###Supported Rules
+### Supported Rules
 
 - include — select objects matching key–value conditions
 
@@ -85,18 +85,18 @@ A generic engine for filtering and sorting collections of objects with arbitrary
 
 - sort_by — sort objects using natural ordering
 
-###Architecture
+### Architecture
 
 Each rule is implemented as an independent module with a unified interface.
 The core engine orchestrates rule execution without depending on concrete implementations.
 
-###This design enables:
+### This design enables:
 
 - easy addition of new rules
 - zero coupling between rules
 - predictable execution flow
 
-Input Example
+### Input Example
 
 ```json
 {
@@ -112,7 +112,7 @@ Input Example
 }
 ```
 
-Output Example
+### Output Example
 
 ```json
 {
@@ -123,7 +123,7 @@ Output Example
 }
 ```
 
-###Key Engineering Focus
+### Key Engineering Focus
 
 - modular rule engine
 - open/closed principle
@@ -132,27 +132,27 @@ Output Example
 
 ---
 
-##Task 3 — Asteroid Localization Algorithm
+## Task 3 — Asteroid Localization Algorithm
 
-###Description
+### Description
 
 A computational problem focused on determining the location of a stationary asteroid using distance measurements from single-use probes.
 
-###Problem Constraints
+### Problem Constraints
 
 - 3D space represented as a cube with edge length 100
 - asteroid located at integer coordinates within the cube
 - probes return only the distance to the asteroid
 - objective: minimize the number of probes used
 
-###Solution Overview
+### Solution Overview
 
 - random generation of asteroid coordinates
 - distance function calculating Euclidean distance
 - algorithmic strategy to converge on the asteroid’s position
 - tracking probe usage and coordinates
 
-Output Example
+### Output Example
 
 ```json
 {
@@ -166,7 +166,7 @@ Output Example
 }
 ```
 
-###Key Engineering Focus
+### Key Engineering Focus
 
 - algorithm design
 - vector-based reasoning
@@ -175,25 +175,25 @@ Output Example
 
 ---
 
-##Task 4 — Dynamic Survey Engine
+## Task 4 — Dynamic Survey Engine
 
-###Description
+### Description
 
 A configurable survey system where the order and presence of questions depend on user answers.
 
-###Features
+### Features
 
 - multiple-choice questions only
 - dynamic question flow
 - configuration-driven logic
 - full traversal of all possible answer paths
 
-###Design
+### Design
 
 - survey logic is decoupled from configuration
 - configuration defines: questions, possible answers, transitions between questions, testing script automatically explores all valid paths
 
-###Output Example
+### Output Example
 
 ```json
 {
@@ -218,7 +218,7 @@ A configurable survey system where the order and presence of questions depend on
 }
 ```
 
-###Key Engineering Focus
+### Key Engineering Focus
 
 - finite-state-like modeling
 - configuration-driven workflows
@@ -227,7 +227,7 @@ A configurable survey system where the order and presence of questions depend on
 
 ---
 
-###General Design Principles Applied
+### General Design Principles Applied
 
 - modularity and isolation
 - extensibility without refactoring
